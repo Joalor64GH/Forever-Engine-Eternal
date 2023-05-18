@@ -9,3 +9,5 @@
 
 After all of these steps, you will be able to compile Forever Engine: Eternal!
 ## If you get any problems while compiling even after doing all of these steps, please report the [issue](https://github.com/Forever-Engine-Eternal/Forever-Engine-Eternal/issues) with all of the required details.
+## THIS ENGINE REQUIRE ALL OF THE LATEST DEPENDENCIES. WE ARE NOT RESPONSIBLE WITH ISSUES RELATED TO OLDER VERSIONS OF LIBRAIRIES.
+## THIS ENGINE IS ONLY MEANT TO BE COMPILED ON DESKTOP. WE ARE NOT RESPONSIBLE WITH ISSUES RELATED TO OTHER PLATFORMS, SUCH AS NEKO AND HTML5.
