@@ -1,0 +1,63 @@
+/**
+* VARIABLES/FUNCTIONS EXPOSED TO STAGE SCRIPTS
+*
+* if a name is assigned, every object on your YAML config file is exposed as a variable to the script
+* said variable has the same name you've assigned
+*
+* addBehind(OBJECT, objectToAdd);
+* addInFront(OBJECT, objectToAdd);
+*
+* stage (references: your stage class)
+* game (references: PlayState.current)
+**/
+
+function create():Void
+{
+    // the create function, ran BEFORE the YAML gets created
+}
+
+function createPost():Void
+{
+    // the post create function, ran after characters get created on playstate
+}
+
+function update(delta:Float):Void
+{
+    // the update function, ran every frame
+}
+
+function onBeat(beat:Int):Void
+{
+    // the onBeat function, ran every beat hit on a song
+}
+
+function onSect(sect:Int):Void
+{
+    // the onSect function, ran every section hit on a song
+}
+
+function onStep(step:Int):Void
+{
+    // the onStep function, ran every step hit on a song
+}
+
+function countdownStart():Void
+{
+    // the countdown start function, ran when the countdown starts
+}
+
+function countdownTick(tick:Int):Void
+{
+    // the countdown tick function, ran every time the countdown counts
+    // "three", "two", "one", "go!"
+}
+
+function songStart():Void
+{
+    // the song start function, ran when the song starts
+}
+
+function songEnd():Void
+{
+    // the song end function, ran when the song ends
+}

@@ -1,0 +1,42 @@
+function createPost():Void {
+	var widShit = Std.int(Sky.width * 6);
+
+	Sky.setGraphicSize(widShit);
+	School.setGraphicSize(widShit);
+	Street.setGraphicSize(widShit);
+	TreesFG.setGraphicSize(Std.int(widShit * 0.8));
+	Trees.setGraphicSize(Std.int(widShit * 1.4));
+	Petals.setGraphicSize(widShit);
+
+	Sky.updateHitbox();
+	School.updateHitbox();
+	Street.updateHitbox();
+	TreesFG.updateHitbox();
+	Trees.updateHitbox();
+	Petals.updateHitbox();
+}
+
+function countdownTick(tick:Int):Void {
+	if (tick % game.gfSpeed == 0)
+		girlsDance();
+}
+
+function onBeat(beat:Int):Void {
+	if (beat % game.gfSpeed == 0)
+		girlsDance();
+}
+
+var danceDir:Bool = false;
+
+function girlsDance():Void {
+	danceDir = !danceDir;
+
+	var anim:String = 'danceLeft';
+	if (danceDir)
+		anim = 'danceRight';
+
+	if (game.SONG.song == 'Roses')
+		anim += '-scared';
+
+	Gals.animation.play(anim, true);
+}

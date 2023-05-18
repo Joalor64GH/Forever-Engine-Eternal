@@ -1,0 +1,56 @@
+image: bfPixel
+healthColor: "#7BD6F6"
+flipX: true
+antialising: false
+size: 6
+
+animations:
+  - { name: "idle", prefix: "BF IDLE instance 1", fps: 24, loop: false }
+  - {
+      name: "singLEFT",
+      prefix: "BF LEFT NOTE instance 1",
+      fps: 24,
+      loop: false,
+    }
+  - {
+      name: "singDOWN",
+      prefix: "BF DOWN NOTE instance 1",
+      fps: 24,
+      loop: false,
+    }
+  - { name: "singUP", prefix: "BF UP NOTE instance 1", fps: 24, loop: false }
+  - {
+      name: "singRIGHT",
+      prefix: "BF RIGHT NOTE instance 1",
+      fps: 24,
+      loop: false,
+    }
+  - {
+      name: "singLEFTmiss",
+      prefix: "BF LEFT MISS instance 1",
+      fps: 24,
+      loop: false,
+    }
+  - {
+      name: "singDOWNmiss",
+      prefix: "BF DOWN MISS instance 1",
+      fps: 24,
+      loop: false,
+    }
+  - {
+      name: "singUPmiss",
+      prefix: "BF UP MISS instance 1",
+      fps: 24,
+      loop: false,
+    }
+  - {
+      name: "singRIGHTmiss",
+      prefix: "BF RIGHT MISS instance 1",
+      fps: 24,
+      loop: false,
+    }
+positionOffset: [0, 0]
+cameraOffset: [0, 50]
+
+deathProperties:
+  { music: "gameOver", deathSound: "fnf_loss_sfx", confirmSound: "gameOverEnd" }

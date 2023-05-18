@@ -1,0 +1,17 @@
+stageObjects:
+  - name: Background
+    image: "stageback"
+    position: [-600, -200]
+    parallax: [0.9, 0.9]
+
+  - name: Ground
+    image: "stagefront"
+    position: [-650, 600]
+    parallax: [0.9, 0.9]
+    size: 0.9
+
+  - name: Curtains
+    image: "stagecurtains"
+    position: [-500, -300]
+    parallax: [1.3, 1.3]
+    size: 0.9

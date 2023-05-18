@@ -1,0 +1,69 @@
+playerPosition: [950, 1070]
+opponentPosition: [250, 1430]
+crowdPosition: [600, 1050]
+
+stageObjects:
+  - name: Sky
+    image: "weebSky"
+    parallax: [0.1, 0.1]
+
+  - name: School
+    image: "weebSchool"
+    position: [-200, 0]
+    parallax: [0.6, 0.90]
+
+  - name: Street
+    image: "weebStreet"
+    position: [-200, 0]
+    parallax: [0.95, 0.95]
+
+  - name: TreesFG
+    image: "weebTreesBack"
+    position: [-30, 130]
+    parallax: [0.9, 0.9]
+
+  - name: Trees
+    image: "weebTrees"
+    type: "packer"
+    animations:
+      - name: "treeLoop"
+        frames: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        fps: 12
+    defaultAnim: "treeLoop"
+    position: [-580, 800]
+    parallax: [0.85, 0.85]
+
+  - name: Petals
+    image: "petals"
+    type: "sparrow"
+    animations:
+      - name: "petals"
+        prefix: "PETALS ALL"
+        fps: 24
+    defaultAnim: "petals"
+    position: [-200, -40]
+    parallax: [0.85, 0.85]
+
+  - name: Gals
+    image: "bgFreaks"
+    type: "sparrow"
+    animations:
+      - name: danceLeft
+        prefix: "BG girls group"
+        indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        fps: 24
+      - name: danceRight
+        prefix: "BG girls group"
+        indices: [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+        fps: 24
+      - name: danceLeft-scared
+        prefix: "BG fangirls dissuaded"
+        indices: [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        fps: 24
+      - name: danceRight-scared
+        prefix: "BG fangirls dissuaded"
+        indices: [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+        fps: 24
+    position: [-100, 380]
+    parallax: [0.9, 0.9]
+    size: 6

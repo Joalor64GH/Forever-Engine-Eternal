@@ -1,0 +1,27 @@
+<!DOCTYPE eternal-credits>
+<credits >
+
+    <category name="Forever Engine: Eternal" >
+
+        <credit name="Sword352" icon="sword" color="#ff0000" description="brah" >
+            <social image="instagram" value="https://www.deepl.com/fr/translator" />
+            <social image="instagram" value="im jumbo josh" />
+            <social image="instagram" value="brah" />
+            <social image="instagram" value="Sword352#0001" />
+        </credit>
+
+        <credit name="BeastlyGhost" icon="sword" color="#4D4D4D" description="no more" expression="I SHIT MYSELF"/>
+    </category>
+
+    <category name="hi guys" >
+        <credit name="no" icon="sword" color="#00a000" description="brah" />
+        <credit name="fak u" icon="sword" color="#404040" description="brah" />
+    </category>
+
+    <category name="trolled" >
+        <credit name="lets play" icon="sword" color="#00a000" description="brah" />
+        <credit name="fonite" icon="sword" color="#404040" description="brah" />
+        <credit name="battle pass" icon="sword" color="#404040" description="brah" />
+    </category>
+    
+</credits>

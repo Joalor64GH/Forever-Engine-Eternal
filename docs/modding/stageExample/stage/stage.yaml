@@ -1,0 +1,46 @@
+playerPosition: [750, 850]
+opponentPosition: [50, 850]
+crowdPosition: [300, 730]
+
+playerCamera: [0, 0]
+opponentCamera: [0, 0]
+crowdCamera: [0, 0]
+
+destroyGF: false
+stageCameraZoom: 1.05
+
+stageObjects:
+  - name: Background
+    image: "stageback"
+    position: [-600, -200]
+    parallax: [0.9, 0.9]
+    flipX: false
+    flipY: false
+    updateHitbox: false
+    layer: "bg" # fg, bg, gf
+    type: "img" # img, sparrow, packer
+    alpha: 1
+    scale: [1, 1]
+    size: 1
+    # animations:
+    #  - name: "idle"
+    #    prefix: "idle"
+    #    fps: 24
+    #    loop: false
+    #  - name: "boo"
+    #    prefix: "boo"
+    #    fps: 24
+    #    loop: false
+    # defaultAnim: "idle"
+
+  - name: Ground
+    image: "stagefront"
+    position: [-650, 600]
+    parallax: [0.9, 0.9]
+    size: 0.9
+
+  - name: Curtains
+    image: "stagecurtains"
+    position: [-500, -300]
+    parallax: [1.3, 1.3]
+    size: 0.9

@@ -1,0 +1,14 @@
+stageObjects:
+  - name: Background
+    image: "halloween_bg"
+    position: [-200, -100]
+    animations:
+      - name: "idle"
+        prefix: "halloweem bg0"
+        fps: 24
+        loop: false
+      - name: "lightning"
+        prefix: "halloweem bg lightning strike"
+        fps: 24
+        loop: false
+    defaultAnim: "idle"

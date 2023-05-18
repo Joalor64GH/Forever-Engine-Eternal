@@ -1,0 +1,24 @@
+playerPosition: [800, 850]
+opponentPosition: [150, 850]
+crowdPosition: [400, 730]
+
+stageObjects:
+  - name: Sky
+    image: "sky"
+    position: [-100, 0]
+    parallax: [0.1, 0.1]
+
+  - name: City
+    image: "city"
+    position: [120, 0]
+    parallax: [0.9, 0.9]
+    size: 0.85
+    updateHitbox: true
+
+  - name: StreetBehind
+    image: "behindTrain"
+    position: [-40, 50]
+
+  - name: Street
+    image: "street"
+    position: [-40, 50]

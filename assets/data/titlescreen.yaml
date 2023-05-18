@@ -1,0 +1,54 @@
+musicFile: "freakyMenu"
+musicFolder: "music"
+musicBPM: 102
+
+sequenceBeats:
+  - call: "create"
+    beat: 1
+    text: "ninjamuffin, phantomArcade, kawaisprite, evilsker"
+
+  - call: "add"
+    beat: 3
+    text: "present"
+
+  - call: "delete"
+    beat: 4
+
+  - call: "create"
+    beat: 5
+    text: "In association, with"
+
+  - call: "add"
+    beat: 7
+    text: "newgrounds"
+    ngVisible: true
+
+  - call: "delete"
+    beat: 8
+    ngVisible: false
+
+  - call: "create"
+    beat: 9
+    text: "Title_firstRandom"
+
+  - call: "add"
+    beat: 11
+    text: "Title_secondRandom"
+
+  - call: "delete"
+    beat: 12
+
+  - call: "add"
+    beat: 13
+    text: "Friday"
+
+  - call: "add"
+    beat: 14
+    text: "Night"
+
+  - call: "add"
+    beat: 15
+    text: "Funkin"
+
+  - call: "skip"
+    beat: 16

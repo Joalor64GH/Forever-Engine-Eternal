@@ -1,0 +1,7 @@
+<!DOCTYPE eternal-achievements>
+
+<achievementsList>
+    
+    <achievement id="testing" displayName="lol" description="test achievement" />
+
+</achievementsList>

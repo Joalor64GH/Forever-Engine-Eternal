@@ -1,0 +1,7 @@
+function initShader(params) {
+	loadShader("VhsShader");
+}
+
+function update(elapsed) {
+	shaderData.time.value = [Conductor.songPosition / 1000];
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.0.2 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="texture.png" width="895" height="439">
+	<SubTexture name="shit.png" x="5" y="5" width="285" height="163" frameX="-0" frameY="-0" frameWidth="285" frameHeight="163"/>
+	<SubTexture name="sick.png" x="5" y="178" width="403" height="152" frameX="-0" frameY="-0" frameWidth="403" frameHeight="152"/>
+	<SubTexture name="miss.png" x="300" y="5" width="263" height="152" frameX="-0" frameY="-0" frameWidth="263" frameHeight="152"/>
+	<SubTexture name="bad.png" x="418" y="167" width="261" height="131" frameX="-0" frameY="-0" frameWidth="261" frameHeight="131"/>
+	<SubTexture name="good.png" x="573" y="308" width="317" height="126" frameX="-0" frameY="-0" frameWidth="317" frameHeight="126"/>
+</TextureAtlas>

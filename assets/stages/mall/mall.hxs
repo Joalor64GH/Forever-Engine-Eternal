@@ -1,0 +1,15 @@
+function countdownTick(tick:Int):Void {
+	if (tick % game.gfSpeed == 0)
+		charactersDance();
+}
+
+function onBeat(beat:Int):Void {
+	if (beat % game.gfSpeed == 0)
+		charactersDance();
+}
+
+function charactersDance():Void {
+	UpperBoppers.animation.play('bop', true);
+	BottomBoppers.animation.play('bop', true);
+	Santa.animation.play('gunpoint', true);
+}

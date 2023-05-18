@@ -1,0 +1,15 @@
+playerPosition: [1300, 1400]
+opponentPosition: [200, 1400]
+crowdPosition: [920, 1450]
+
+stageObjects:
+  - name: Background
+    image: "animatedEvilSchool"
+    position: [400, 200]
+    animations:
+      - name: "idle"
+        prefix: "background 2 instance 1"
+        fps: 24
+        loop: true
+    defaultAnim: "idle"
+    scale: [6, 6]

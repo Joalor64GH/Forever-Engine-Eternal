@@ -1,0 +1,13 @@
+image: BF_DEATH
+flipX: true
+
+animations:
+  - { name: "firstDeath", prefix: "BF dies", fps: 24, loop: false }
+  - { name: "deathLoop", prefix: "BF Dead Loop", fps: 24, loop: false }
+  - { name: "deathConfirm", prefix: "BF Dead confirm", fps: 24, loop: false }
+
+positionOffset: [0, 0]
+cameraOffset: [0, 0]
+
+deathProperties:
+  { music: "gameOver", deathSound: "fnf_loss_sfx", confirmSound: "gameOverEnd" }

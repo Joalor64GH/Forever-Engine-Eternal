@@ -1,0 +1,33 @@
+playerPosition: [1010, 630]
+opponentPosition: [50, 850]
+crowdPosition: [300, 730]
+
+stageCameraZoom: 0.90
+
+stageObjects:
+  - name: Sunset
+    image: "limoSunset"
+    position: [-120, -50]
+    parallax: [0.1, 0.1]
+
+  - name: LimoBG
+    image: "bgLimo"
+    type: "sparrow"
+    animations:
+      - name: "drive"
+        prefix: "background limo pink"
+        fps: 24
+    defaultAnim: "drive"
+    position: [-200, 480]
+    parallax: [0.4, 0.4]
+
+  - name: Driver
+    image: "limoDrive"
+    type: "sparrow"
+    animations:
+      - name: "drive"
+        prefix: "Limo stage"
+        fps: 24
+    defaultAnim: "drive"
+    layer: "gf"
+    position: [-120, 550]

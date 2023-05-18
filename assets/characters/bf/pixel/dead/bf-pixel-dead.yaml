@@ -1,0 +1,14 @@
+image: bfPixelsDEAD
+flipX: true
+size: 6
+
+animations:
+  - { name: "firstDeath", prefix: "BF Dies pixel", fps: 24, loop: false, offset: [0, 0]}
+  - { name: "deathLoop", prefix: "Retry Loop", fps: 24, loop: true, offset: [-30, -12] }
+  - { name: "deathConfirm", prefix: "RETRY CONFIRM", fps: 24, loop: false, offset: [-30, 12] }
+
+positionOffset: [0, 0]
+cameraOffset: [0, 0]
+
+deathProperties:
+  { music: "gameOver", deathSound: "fnf_loss_sfx", confirmSound: "gameOverEnd" }

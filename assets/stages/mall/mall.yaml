@@ -1,0 +1,67 @@
+playerPosition: [950, 880]
+opponentPosition: [-350, 890]
+crowdPosition: [300, 790]
+
+stageCameraZoom: 0.80
+
+stageObjects:
+  - name: Walls
+    image: "bgWalls"
+    position: [-1000, -500]
+    parallax: [0.2, 0.2]
+    active: false
+    size: 0.8
+    updateHitbox: true
+
+  - name: UpperBoppers
+    image: "upperBop"
+    type: "sparrow"
+    animations:
+      - name: "bop"
+        prefix: "Upper Crowd Bob"
+        fps: 24
+    defaultAnim: "bop"
+    position: [-240, -90]
+    parallax: [0.33, 0.33]
+    size: 0.85
+    updateHitbox: true
+
+  - name: Escalator
+    image: "bgEscalator"
+    position: [-1100, -600]
+    parallax: [0.3, 0.3]
+    size: 0.9
+    updateHitbox: true
+
+  - name: Tree
+    image: "christmasTree"
+    position: [370, -250]
+    parallax: [0.40, 0.40]
+
+  - name: BottomBoppers
+    image: "bottomBop"
+    type: "sparrow"
+    animations:
+      - name: "bop"
+        prefix: "Bottom Level Boppers"
+        fps: 24
+    defaultAnim: "bop"
+    position: [-240, -90]
+    parallax: [0.33, 0.33]
+    size: 1
+    updateHitbox: true
+
+  - name: Snow
+    image: "fgSnow"
+    position: [-600, 700]
+    active: false
+
+  - name: Santa
+    image: "santa"
+    type: "sparrow"
+    animations:
+      - name: "gunpoint"
+        prefix: "santa idle in fear"
+        fps: 24
+    defaultAnim: "gunpoint"
+    position: [-840, 150]

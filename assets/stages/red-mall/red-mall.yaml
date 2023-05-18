@@ -1,0 +1,26 @@
+playerPosition: [900, 850]
+opponentPosition: [-90, 850]
+crowdPosition: [300, 780]
+
+stageObjects:
+  - name: Background
+    library: "stages/mall"
+    image: "evilBG"
+    position: [-400, -500]
+    parallax: [0.2, 0.2]
+    size: 0.8
+    updateHitbox: true
+    antialiasing: true
+
+  - name: Tree
+    image: "evilTree"
+    library: "stages/mall"
+    position: [300, -300]
+    parallax: [0.2, 0.2]
+    antialiasing: true
+
+  - name: Snow
+    image: "evilSnow"
+    library: "stages/mall"
+    position: [-600, 700]
+    antialiasing: true

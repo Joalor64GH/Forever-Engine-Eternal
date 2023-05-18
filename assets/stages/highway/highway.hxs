@@ -1,0 +1,48 @@
+var grpLimoDancers:FlxGroup;
+var limo:FNFSprite;
+var fastCar:FNFSprite;
+
+function createPost():Void {
+	// background boogies.
+	grpLimoDancers = new FlxGroup();
+	stage.add(grpLimoDancers);
+
+	for (i in 0...5) {
+		// create five boogies.
+		var dancer:FNFSprite = createBoogie((370 * i) + 130, LimoBG.y - 380);
+		dancer.scrollFactor.set(0.4, 0.4);
+		grpLimoDancers.add(dancer);
+	}
+}
+
+function createBoogie(x:Float, y:Float):FNFSprite {
+	var boogie:FNFSprite = new FNFSprite(x, y);
+	boogie.frames = Paths.getSparrowAtlas("limoDancer", "stages/" + game.curStage);
+	boogie.animation.addByIndices('danceLeft', 'bg dancer sketch PINK', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+	boogie.animation.addByIndices('danceRight', 'bg dancer sketch PINK', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+	boogie.playAnim('danceLeft');
+	return boogie;
+}
+
+function countdownTick(tick:Int):Void {
+	if (tick % game.gfSpeed == 0)
+		boogieDance();
+}
+
+function onBeat(beat:Int):Void {
+	if (beat % game.gfSpeed == 0)
+		boogieDance();
+}
+
+var danceDir:Bool = false;
+
+function boogieDance():Void {
+	danceDir = !danceDir;
+
+	var anim:String = 'danceLeft';
+	if (danceDir)
+		anim = 'danceRight';
+
+	for (boogie in grpLimoDancers.members)
+		boogie.animation.play(anim, true);
+}

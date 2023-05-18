@@ -1,0 +1,23 @@
+var rgbShiftIntensity:Float = 0;
+var rgbOffset:Float;
+
+function initShader(settings)
+{
+    loadShader('ChromaticAberration');
+    shaderData.rOffset.value = [settings[0]];
+    shaderData.bOffset.value = [-settings[0]];
+    rgbShiftIntensity = settings[1];
+}
+
+function update(elapsed:Float)
+{
+    rgbOffset = FlxMath.lerp(rgbOffset, 0.001, 0.05);
+    shaderData.rOffset.value = [rgbOffset];
+    shaderData.bOffset.value = [-rgbOffset]; 
+}
+
+function onBeat(curBeat)
+{
+    if (curBeat % 2 == 0)
+        rgbOffset = rgbShiftIntensity;
+}

@@ -1,0 +1,9 @@
+function create():Void
+{
+    trace("Hello World");
+}
+
+function destroy():Void
+{
+    trace("Goodbye World");
+}

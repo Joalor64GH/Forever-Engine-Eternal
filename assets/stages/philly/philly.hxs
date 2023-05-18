@@ -1,0 +1,106 @@
+trace('Philly Script Init.');
+var phillyTrain:FNFSprite;
+var phillyCityLight:FNFSprite;
+var phillyLightColors = [0xFF31A2FD, 0xFF31FD8C, 0xFFFB33F5, 0xFFFD4531, 0xFFFFBA633];
+var trainSound:FlxSound;
+
+function create():Void {
+	// preload train sound
+	trainSound = new FlxSound();
+	trainSound.loadEmbedded(Paths.sound('train_passes', 'stages/' + game.curStage));
+	FlxG.sound.list.add(trainSound);
+}
+
+function createPost():Void {
+	phillyCityLight = new FNFSprite(City.x);
+	phillyCityLight.loadGraphic(Paths.image('win', 'stages/' + game.curStage));
+	phillyCityLight.scrollFactor.set(0.9, 0.9);
+	phillyCityLight.alpha = 0;
+	phillyCityLight.setGraphicSize(Std.int(phillyCityLight.width * 0.85));
+	phillyCityLight.updateHitbox();
+	phillyCityLight.antialiasing = true;
+	addFront(City, phillyCityLight);
+
+	phillyTrain = new FNFSprite(2000, 360);
+	phillyTrain.loadGraphic(Paths.image('train', 'stages/' + game.curStage));
+	addFront(StreetBehind, phillyTrain);
+}
+
+var curLight:Int = 0;
+var trainMoving:Bool = false;
+var trainFrameTiming:Float = 0;
+var trainCars:Int = 8;
+var trainCooldown:Int = 0;
+var trainFinishing:Bool = false;
+var startedMoving:Bool = false;
+
+function update(delta:Float):Void {
+	if (trainMoving) {
+		trainFrameTiming += delta;
+		if (trainFrameTiming >= 1 / 24) {
+			updateTrainPos(game.gf);
+			trainFrameTiming = 0;
+		}
+	}
+}
+
+function onBeat(beat:Int):Void {
+	if (!trainMoving)
+		trainCooldown += 1;
+
+	if (beat % 4 == 0) {
+		FlxTween.cancelTweensOf(phillyCityLight);
+		var lastLight:FlxSprite = phillyLightColors[curLight];
+		// To prevent duplicate lights, iterate until you get a matching light
+		while (lastLight == phillyLightColors[curLight])
+			curLight = FlxG.random.int(0, phillyLightColors.length - 1);
+
+		phillyCityLight.color = phillyLightColors[curLight];
+
+		phillyCityLight.alpha = 1;
+		FlxTween.tween(phillyCityLight, {alpha: 0}, Conductor.stepCrochet * .016);
+	}
+
+	if (beat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8) {
+		trainCooldown = FlxG.random.int(-4, 0);
+		trainStart();
+	}
+}
+
+// PHILLY STUFFS!
+function trainStart():Void {
+	trainMoving = true;
+	if (!trainSound.playing)
+		trainSound.play(true);
+}
+
+function updateTrainPos(gf:Character):Void {
+	if (trainSound.time >= 4700) {
+		startedMoving = true;
+		gf.playAnim('hairBlow');
+	}
+
+	if (startedMoving) {
+		phillyTrain.x -= 400;
+
+		if (phillyTrain.x < -2000 && !trainFinishing) {
+			phillyTrain.x = -1150;
+			trainCars -= 1;
+
+			if (trainCars <= 0)
+				trainFinishing = true;
+		}
+
+		if (phillyTrain.x < -4000 && trainFinishing)
+			trainReset(gf);
+	}
+}
+
+function trainReset(gf:Character):Void {
+	gf.playAnim('hairFall');
+	phillyTrain.x = FlxG.width + 200;
+	trainMoving = false;
+	trainCars = 8;
+	trainFinishing = false;
+	startedMoving = false;
+}
