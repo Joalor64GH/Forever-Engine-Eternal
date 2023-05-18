@@ -57,6 +57,7 @@
 
 - In-game Cutscenes
 - FlxAnimate Support
+- Github Wiki
 
 ---------------
 

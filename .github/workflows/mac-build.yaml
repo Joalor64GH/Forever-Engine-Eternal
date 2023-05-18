@@ -1,0 +1,35 @@
+name: Mac Build
+
+on:
+  # push:
+  # pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          submodules: true
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.2.5
+
+      - name: Installing Libraries
+        run: |
+          haxe -cp ./actions -D analyzer-optimize -main Main --interp
+
+      - name: Building
+        run: haxelib run lime build mac -final
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: macBuild
+          path: export/release/macos/bin
+          if-no-files-found: error
