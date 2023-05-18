@@ -36,5 +36,5 @@ It allows both source and soft modding.
 
 ## Building the engine
 ----------------------------------------------------------------
-The instructions to compile the engine are available [here](https://github.com/Forever-Engine-Eternal/Forever-Engine-Eternal/docs/COMPILE-HELP).
+The instructions to compile the engine are available [here](https://github.com/Forever-Engine-Eternal/Forever-Engine-Eternal/blob/master/docs/COMPILE-HELP.md).
 Follow all of these instructions in order to compile the engine properly.
