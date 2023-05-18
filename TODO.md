@@ -34,8 +34,8 @@
 - Finish Achievements
 - Finish Softcoded Characters
 - Modding Support & Mods Menu
-- In-game debug overlay
-- Modchart System
+- Finish the in-game debug overlay
+- Finish the modchart helper
 - Finish Softcoded Discord RPC
 - Add Roll Notes
 - Achievements
