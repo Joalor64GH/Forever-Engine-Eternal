@@ -1,6 +1,6 @@
 name: Compiling Problems
 description: Report any problems while compiling here
-labels: [bug]
+labels: [compiling]
 body:
   - type: textarea
     id: description
