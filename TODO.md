@@ -1,6 +1,7 @@
 ---------------
 ## High Priority
 
+--
 - **Fix the beatHit stop in the secret pause when the music is repeated**
 - **Fix the freeplay beatHit**
 - **Fix the FlxGames shader support**
