@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Prerequisites:**
-Make sure you followed all of the [steps](https://github.com/Forever-Engine-Eternal/Forever-Engine-Eternal/docs/COMPILE-HELP.md).
+Make sure you followed all of the steps (https://github.com/Forever-Engine-Eternal/Forever-Engine-Eternal/blob/master/docs/COMPILE-HELP.md).
 Warnings such as deprecations warnings won't affect compiling.
 
 **Information:**
