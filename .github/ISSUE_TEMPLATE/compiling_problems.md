@@ -1,8 +1,8 @@
 ---
 name: Compiling Problems
 about: Ask for help with compiling errors/problems
-title: "[COMPILING PROBLEMS]"
-labels: 'compiling problems'
+title: ""
+labels: 'compiling'
 assignees: ''
 
 ---

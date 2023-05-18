@@ -1,8 +1,8 @@
 ---
 name: Help & Support
 about: Ask for help or support with any features of the project
-title: "help wanted"
-labels: ''
+title: ""
+labels: 'help wanted'
 assignees: ''
 
 ---
